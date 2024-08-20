@@ -1,0 +1,17 @@
+gitinit
+git add .
+git commit -m 
+git push -u origin main
+git log 
+git log --oneline
+git log --version
+git tag -a
+git tag -d
+git merge {branch name}
+git branch -d {to del a branch}
+git pull -u origin main/master
+gity status
+git show
+which git 
+git config --list
+git clone {URL of the git repo}
