@@ -1,0 +1,21 @@
+docker run -it ubuntu /bin/bash - to create container
+docker ps -a - to list the containers
+docker ps -n1 - to list recent one container
+docker ps -n2 -to list recent two containers
+docker ps -l -to list last created container
+docker ps - to list all running containers
+docker ps -a -f status=exited or docker container ls -a -f status=exited - to list stopped containers
+docker run -it --name <name of the container> ubuntu /bin/bash
+docker rm <container name> - To delete the container
+docker rm $(docker ps -q -a) - to delete all the containers which are not up
+docker rm `docker ps -a -q` - to delete all the containers withc are not up
+docker exec -it <container id> ls - To run the commands on container from host
+docker images - to list the images which are in our local machine
+docker container ls - to list the containers which are up
+docker ps - to list running containers
+docker rm -f $(docker container ls -a -q) or docker rm -f `docker container ls -a -q` - to delete running containers
+docker stop <container name> -To stop container
+docker run -it -d ubuntu /bin/bash- To create a container in backgroup mode
+docker inspect <container name> - to get complete info about container
+docker inspect --format {{.NetworkSettings.Networks.bridge.IPAddress}} $(docker ps -a -q) - to get IPAddress of the containers.
+docker run -it --name sample -h sample ubuntu /bin/bash - to login with name of the container
